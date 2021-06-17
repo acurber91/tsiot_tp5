@@ -44,7 +44,7 @@ En esta instancia estarían dadas las condiciones para ejecutar Bandit. Para hac
 
     bandit -r directorio/a/codigo/fuente
 
-Cuando se ejecuta el último comando en el directorio que contiene el código fuente del sensor, obtenemos la siguiente salida:
+Cuando se ejecuta el último comando en el directorio que contiene el código fuente del sensor. La aplicación permite especificar un "profile" y definir pruebas particulares. Si no se lo define, la herramienta por defecto ejecutará todos los tests. La salida que se obtiene luego de correr el comando en cuestión es la siguiente:
 
     (bandit-env) agustin@laptop:~$ bandit -r /home/agustin/open-traffic-detector/*.py
     [main]	INFO	profile include tests: None
@@ -74,7 +74,7 @@ Cuando se ejecuta el último comando en el directorio que contiene el código fu
             High: 0.0
     Files skipped (0):
 
-Como se puede apreciar, no se han encontrado vulnerabilidades en el código principal de la aplicación. No obstante, como la [aplicación](https://github.com/acurber91/open-traffic-detector)se dividió en archivos para lograr un diseño modular, se analizaron independientemente todos ellos y tampoco se encontraron vulnerabilidades.
+Como se puede apreciar, no se han encontrado vulnerabilidades en el código principal de la [aplicación](https://github.com/acurber91/open-traffic-detector). No obstante, como la misma se dividió en archivos para lograr un diseño modular, se analizaron independientemente todos los componentes de software y tampoco se encontraron vulnerabilidades.
 
 ---
 
